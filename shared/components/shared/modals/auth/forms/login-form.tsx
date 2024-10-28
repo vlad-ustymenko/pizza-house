@@ -1,5 +1,6 @@
+'use client';
+
 import React from 'react';
-import { FormProvider, useForm } from 'react-hook-form';
 import { formLoginSchema, TFormLoginValues } from './schemas';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Title } from '../../../title';
@@ -7,6 +8,7 @@ import { FormInput } from '../../../form';
 import { Button } from '@/shared/components/ui';
 import toast from 'react-hot-toast';
 import { signIn } from 'next-auth/react';
+import { FormProvider, useForm } from 'react-hook-form';
 
 interface Props {
   onClose?: VoidFunction;
